@@ -164,7 +164,7 @@ def collapse_lines(lines:List[str],delimiter = ""):
 
             # remove whitespace between quotes, between brackets
             collapsed_lines.append(delimiter.join(buffer))
-            buffer = ""
+            buffer = []
 
 
         # if the buffer has content in it, add current line
