@@ -120,9 +120,13 @@ def parse(text:str):
 
     # add a TTL to records where one doesn't exist
     def add_ttl(record:list):
-        if not record[1].isdigit():
-            record.insert(1,ttl)
-
+        try:
+            if not record[1].isdigit():
+                record.insert(1,ttl)
+        except:
+            print("ERROR with record:")
+            print(record)
+            print(record.len())
         return record
 
     # add an rclass (defaults to IN) when one isn't present
