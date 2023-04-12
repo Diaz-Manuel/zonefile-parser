@@ -31,12 +31,11 @@ def clean(text:str):
 def parse(text:str):
 
     text = clean(text)
-
+    print(text)
     raw_lines = text.splitlines()
 
     # function to collapse records that are spread with brackets
     lines = collapse_lines(raw_lines)
-    
 
     ttl = default_ttl(text)
 
