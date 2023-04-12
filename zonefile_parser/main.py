@@ -126,7 +126,7 @@ def parse(text:str):
         except:
             print("ERROR with record:")
             print(record)
-            print(record.len())
+            print(len(record))
         return record
 
     # add an rclass (defaults to IN) when one isn't present
